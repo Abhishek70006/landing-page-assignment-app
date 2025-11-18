@@ -1,0 +1,48 @@
+/* body { font-family: Arial, sans-serif; margin: 0; padding: 0; } */
+
+/* Add in index.css or global CSS */
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  width: 100%;
+}
+
+nav {
+  background: #222;
+  color: #fff;
+  padding: 10px;
+}
+nav a {
+  color: #fff;
+  margin-right: 10px;
+  text-decoration: none;
+}
+.container {
+  padding: 20px;
+}
+.grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.card {
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 6px;
+  width: 300px;
+}
+input,
+textarea {
+  display: block;
+  margin: 8px 0;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
