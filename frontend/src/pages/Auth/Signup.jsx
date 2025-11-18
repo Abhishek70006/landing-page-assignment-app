@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import backgroundImage from "../../assets/homepagephoto.svg";
+import api from "../../api";
 
 function Signup() {
   const [name, setName] = useState("");
@@ -14,10 +15,12 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post(
-        "https://landing-page-assignment-app.onrender.com/api/auth/signup",
-        { name, email, password, role }
-      );
+      const { data } = await axios.post("/auth/signup", {
+        name,
+        email,
+        password,
+        role,
+      });
 
       localStorage.setItem("token", data.token);
       localStorage.setItem("role", data.user.role);
