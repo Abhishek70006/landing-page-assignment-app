@@ -17,7 +17,6 @@ const allowedOrigins = [
   "https://landing-page-assignment-app.vercel.app",
   "https://your-render-backend-url.onrender.com",
 ];
-
 app.use(
   cors({
     origin: function (origin, callback) {
